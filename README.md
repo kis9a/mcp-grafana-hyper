@@ -1,3 +1,17 @@
+> **Forked from** [Grafana MCP server](https://github.com/grafana/mcp-server)
+
+This repository is a fork of the original Grafana MCP server.  
+It includes custom modifications listed below.
+
+## Changes from upstream
+
+- Added support for a new tool: **QuestDB**
+  - Introduced `questdb` flag to enable/disable
+  - Added `tools/questdb.go` implementing the QuestDB query logic
+- Extended transport options to support `streamable-http`
+- Added dependency: `github.com/DataDog/zstd`
+
+
 # Grafana MCP server
 
 A [Model Context Protocol][mcp] (MCP) server for Grafana.
