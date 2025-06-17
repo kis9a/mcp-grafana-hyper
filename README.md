@@ -8,6 +8,9 @@ It includes custom modifications listed below.
 - Added support for a new tool: **QuestDB**
   - Introduced `questdb` flag to enable/disable
   - Added `tools/questdb.go` implementing the QuestDB query logic
+- Added support for a new tool: **Athena**
+  - Introduced `athena` flag to enable/disable
+  - Added `tools/athena.go` implementing the Athena query logic
 - Extended transport options to support `streamable-http`
 - Added dependency: `github.com/DataDog/zstd`
 
@@ -30,7 +33,7 @@ _The following features are currently available in MCP server. This list is for 
 
 ### Datasources
 - **List and fetch datasource information:** View all configured datasources and retrieve detailed information about each.
-    - _Supported datasource types: Prometheus, Loki._
+    - _Supported datasource types: Prometheus, Loki, QuestDB, Athena._
 
 ### Prometheus Querying
 - **Query Prometheus:** Execute PromQL queries (supports both instant and range metric queries) against Prometheus datasources.
@@ -110,6 +113,8 @@ the OnCall tools, use `--disable-oncall`.
 | `list_pyroscope_label_values`     | Pyroscope   | List label values matching a selector for a label name             |
 | `list_pyroscope_profile_types`    | Pyroscope   | List available profile types                                       |
 | `fetch_pyroscope_profile`         | Pyroscope   | Fetches a profile in DOT format for analysis                       |
+| `query_questdb_sql`               | QuestDB     | QuestDB datasource: Executes arbitrary SQL and returns the results as an array of JSON objects, one per row. |
+| `query_athena_sql`                | Athena      | Athena datasource: Executes arbitrary SQL and returns the results as an array of JSON objects, one per row. |
 
 ## Usage
 
